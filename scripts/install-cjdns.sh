@@ -24,5 +24,5 @@ chmod +x /etc/init.d/cjdns
 update-rc.d cjdns defaults
 service cjdns start
 
-cp /opt/cjdns/contrib/python/cjdns.py /opt/cjdns/contrib/python/bencode.py /usr/lib/pymodules/python2.7/
+cp /opt/cjdns/contrib/python/cjdns.py /opt/cjdns/contrib/python/bencode.py /usr/lib/python2.7/
 cp /opt/cjdns/contrib/python/cexec /opt/cjdns/contrib/python/cjdnslog /opt/cjdns/contrib/python/dumptable /opt/cjdns/contrib/python/findnodes /usr/bin/
