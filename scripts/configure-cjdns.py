@@ -7,13 +7,13 @@ original['interfaces']['ETHInterface'] = []
 original['interfaces']['ETHInterface'].append({"bind": "eth0", "beacon": 2, "connectTo": {}})
 
 for peerfile in os.listdir("/vagrant/peers/"):
-#    try:
+    try:
         peers = json.load(open("/vagrant/peers/" + peerfile))
         for interface in peers:
             for peer in peers[interface]:
                 original['interfaces'][interface][0]['connectTo'][peer] = peers[interface][peer]
-#    except:
-#        sys.stderr.write("Failed to import peer")
+    except:
+        sys.stderr.write("Failed to import peer")
 
 conf = open("/etc/cjdroute.conf", "w+")
 conf.write(json.dumps(original, sort_keys=True, indent=4, separators=(',', ': ')))
