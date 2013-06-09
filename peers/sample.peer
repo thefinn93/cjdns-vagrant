@@ -1,0 +1,10 @@
+{
+    "UDPInterface": {
+        "ip:port": {
+            "name": "Sample Peer",
+            "publicKey": "lolwat.k",
+            "password": "extremely secure password",
+            "ipv6": "fcee:dead:beef:dead:beef:dead:beef:cafe"
+        }
+    }
+}
