@@ -4,11 +4,8 @@ echo "CJDPATH=/opt/" >> /etc/default/cjdns
 chmod +x /etc/default/cjdns
 
 cd /opt
-## TMP HAX TILL CJD ACCEPTS PULL #226
-#git clone https://github.com/cjdelisle/cjdns.git cjdns
-git clone https://github.com/thefinn93/cjdns.git cjdns
+git clone https://github.com/cjdelisle/cjdns.git cjdns
 cd cjdns
-git checkout initscript
 ./do
 ./cjdroute --genconf > /tmp/cjdroute.conf
 ./build/cleanconfig < /tmp/cjdroute.conf > /etc/cjdroute.conf
